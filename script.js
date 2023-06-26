@@ -1,6 +1,22 @@
-function decimalToBinary(dec) {
-  return dec.toString(2);
+	function decimalToBinary(decimal) {
+  // Check if the input is 0
+  if (decimal === 0) {
+    return '0';
+  }
+
+  let binary = '';
+
+  while (decimal > 0) {
+    // Append the least significant bit (remainder of division by 2)
+    binary = (decimal % 2) + binary;
+
+    // Update the decimal by dividing it by 2 (integer division)
+    decimal = Math.floor(decimal / 2);
+  }
+
+  return binary;
 }
-console.log(decimalToBinary(7)); 
-console.log(decimalToBinary(10)); 
-console.log(decimalToBinary(33));
+  
+
+
+module.exports = threeSum;
