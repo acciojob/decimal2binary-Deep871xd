@@ -1,21 +1,17 @@
-function threeSum(n) {
-// write your code here
-	let binaryNum = new Array(32);
- 
-    // counter for binary array
-    let i = 0;
-    while (n > 0) {
- 
-        // storing remainder in binary array
-        binaryNum[i] = n % 2;
-        n = Math.floor(n / 2);
-        i++;
+function convertToBinary(x) {
+    let bin = 0;
+    let rem, i = 1, step = 1;
+    while (x != 0) {
+        rem = x % 2;
+    
+        x = parseInt(x / 2);
+        bin = bin + rem * i;
+        i = i * 10;
     }
- 
-    // printing binary array in reverse order
-    for (let j = i - 1; j >= 0; j--)
-        document.write(binaryNum[j]);
-	
+    // console.log(`Binary: ${bin}`);
 }
 
-module.exports = threeSum;
+// take input
+let number = prompt('Enter a decim al number: ');
+
+convertToBinary(number);
