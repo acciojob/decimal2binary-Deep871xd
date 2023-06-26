@@ -1,6 +1,8 @@
-function decimalToBinary(decimalNumber) {
-// write your code here
-  return decimalNumber.toString(2)
-}
+const decimalToBinary = (num) => {
+  let binaryStr = num.toString(2);
+  return binaryStr;
+};
 
-console.log(decimalToBinary(7));
+const num = parseInt(process.argv[2]);
+const binaryStr = decimalToBinary(num);
+console.log(binaryStr);
