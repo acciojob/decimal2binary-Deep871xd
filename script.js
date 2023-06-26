@@ -1,15 +1,6 @@
-function decToBin(num){
-
-	let pow=1;
-	let bin=0;
-
-	while(num!=0){
-		let rem=num%2;
-		bin=bin+rem*pow;
-		pow=pow*10;
-		num=parseInt(num/2);
-	}
-	return bin;
+function decimalToBinary(dec) {
+  return dec.toString(2);
 }
-
-module.exports=decToBin;
+console.log(decimalToBinary(7)); 
+console.log(decimalToBinary(10)); 
+console.log(decimalToBinary(33));
