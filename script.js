@@ -1,16 +1,15 @@
-function decimalToBinary(decimal) {
-  let binary = "";
-  if (decimal === 0) {
-    binary = "0";
-  }
-  while (decimal > 0) {
-    binary = (decimal % 2) + binary;
-    decimal = Math.floor(decimal / 2);
-  }
-  return binary;
+function decToBin(num){
+
+	let pow=1;
+	let bin=0;
+
+	while(num!=0){
+		let rem=num%2;
+		bin=bin+rem*pow;
+		pow=pow*10;
+		num=parseInt(num/2);
+	}
+	return bin;
 }
 
-// Example usage
-const decimal = 33;
-const binary = decimalToBinary(decimal);
-console.log(binary);
+module.exports=decToBin;
