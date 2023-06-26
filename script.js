@@ -1,15 +1,6 @@
-function number(num){
-    let add = "";
-        while(num > 0){
-            
-            let str = num%2;
-            add = str.toString() + add;
+function decimalToBinary(decimalNumber) {
+// write your code here
+  return decimalNumber.toString(2)
+}
 
-            num =Math.floor(num/2);
-          
-        }
-        return add;
-    
-    }
-
-module.exports = threeSum;
+console.log(decimalToBinary(7));
