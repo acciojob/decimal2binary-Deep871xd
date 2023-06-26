@@ -1,8 +1,8 @@
-function decimalToBinary(a){
+function decimalToBinary(decimal) {
   let binary = "";
-  while (a > 0) {
-    binary = (a % 2) + binary;
-    a = Math.floor(a / 2);
+  while (decimal > 0) {
+    binary = (decimal % 2) + binary;
+    decimal = Math.floor(decimal / 2);
   }
-	return a;
+  return binary;
 }
